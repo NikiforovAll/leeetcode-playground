@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "dotnet-format": {
+      "version": "3.3.111304",
+      "commands": [
+        "dotnet-format"
+      ]
+    },
+    "altcover.global": {
+      "version": "6.8.761",
+      "commands": [
+        "altcover"
+      ]
+    }
+  }
+}
