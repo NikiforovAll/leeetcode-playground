@@ -1,5 +1,3 @@
-using System.Linq;
-using System.Net.NetworkInformation;
 using System.Collections.Generic;
 /*
  * @lc app=leetcode id=547 lang=csharp
@@ -86,6 +84,7 @@ namespace _547
             return cnt;
         }
 
+        // This DFS works good for symmetrical matrix /(undirected graph)
         private void DFSUtil(int[][] M, int k, HashSet<int> visited)
         {
             var length = M.Length;

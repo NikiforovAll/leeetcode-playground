@@ -52,7 +52,7 @@ public class Solution : VersionControl
         var right = n;
         while (left < right)
         {
-            var mid = left + (right - left) / 2;
+            var mid = left + (right - left) / 2; // this avoids overflow
             if (IsBadVersion(mid))
             {
                 right = mid;
