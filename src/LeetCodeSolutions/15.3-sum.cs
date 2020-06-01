@@ -48,34 +48,34 @@ namespace _15
             Array.Sort(nums);
             for (int i = 0; i < nums.Length - 2; i++)
             {
-                int k = i + 1, v = nums.Length - 1;
-                while (k < v)
+                int low = i + 1, high = nums.Length - 1;
+                while (low < high)
                 {
-                    var sum = nums[k] + nums[v];
+                    var sum = nums[low] + nums[high];
                     if (sum + nums[i] == 0)
                     {
                         var isUnique = true;
                         for (int j = res.Count - 1; j >= 0 && nums[i] == res[j][0]; j--)
                         {
                             var lr = res[j];
-                            if ((nums[i], nums[k], nums[v]) == (lr[0], lr[1], lr[2]))
+                            if ((nums[i], nums[low], nums[high]) == (lr[0], lr[1], lr[2]))
                             {
                                 isUnique = false;
                                 break;
                             }
                         }
                         if(isUnique)
-                            res.Add(new int[] { nums[i], nums[k], nums[v] });
-                        k++;
-                        v--;
+                            res.Add(new int[] { nums[i], nums[low], nums[high] });
+                        low++;
+                        high--;
                     }
                     else if (sum > -nums[i])
                     {
-                        v--;
+                        high--;
                     }
                     else
                     {
-                        k++;
+                        low++;
                     }
                 }
             }
