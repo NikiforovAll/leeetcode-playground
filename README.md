@@ -19,6 +19,7 @@ Leetcode url: <https://leetcode.com/nikiforovall/>
 | 200 | [NumberOfIslands](https://leetcode.com/problems/number-of-islands) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/200.number-of-islands.cs) | In-place uncheck of not visited islands via DFS/BFS |
 | 278 | [FirstBadVersion](https://leetcode.com/problems/first-bad-version) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/278.first-bad-version.cs) | Bisection |
 | 414 | [ThirdMaximumNumber](https://leetcode.com/problems/third-maximum-number/description/) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/414.third-maximum-number.cs) | Three consecutive counters, stored element shift |
+| 485 | [MaxConsecutiveOnes](https://leetcode.com/problems/third-maximum-number/description/) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/485.max-consecutive-ones.cs) | Sliding window for non-zero part of array and current sum calculation as index diff |
 | 547 | [FriendCircles](https://leetcode.com/problems/friend-circles) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/547.friend-circles.cs) | Checked DFS nodes |
 | 904 | [FruitIntoBaskets](https://leetcode.com/problems/fruit-into-baskets) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/904.fruit-into-baskets.cs) | Sliding window, a bunch of pointers to store consecutive sequence of previous latest element |
 | 977 | [SquaresOfASortedArray](https://leetcode.com/problems/squares-of-a-sorted-array) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/977.squares-of-a-sorted-array.cs) | Merge sort, array with negative numbers is traversed in a reversed manner |
@@ -26,6 +27,7 @@ Leetcode url: <https://leetcode.com/nikiforovall/>
 | 1004 | [TwoCityScheduling](https://leetcode.com/problems/two-city-scheduling) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/1029.two-city-scheduling.cs) | Greedy solution based on costs difference heuristic + sorting |
 | 1114 | [FirstInOrder](https://leetcode.com/problems/print-in-order/) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/1114.print-in-order.cs) | Event-based blocking ManualResetEventSlim |
 | 1115 | [PrintFooBarAlternately](https://leetcode.com/problems/print-foobar-alternately/description/) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/1115.print-foo-bar-alternately.cs) | Event-based blocking ManualResetEventSlim |
+| 1295 | [FindNumbersWithEvenNumberOfDigits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits) | [C#](https://github.com/NikiforovAll/leetcode-playground/blob/master/src/LeetCodeSolutions/1295.find-numbers-with-even-number-of-digits.cs) | Reduce arr item to double digit by dividing by 100 and count |
 
 ## Other Leetcode Repos
 
