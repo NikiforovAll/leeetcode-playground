@@ -41,30 +41,41 @@ namespace _88
     // @lc code=start
     public class Solution
     {
+        // shift, this way of traversal is not optimal
+        // public void Merge(int[] nums1, int m, int[] nums2, int n)
+        // {
+        //     // p curr item in nums1_0[..m]
+        //     // q curr item in nums2
+        //     // pos curr index in result, nums1
+        //     int p = 0, pos = 0, q = 0;
+        //     while (pos < nums1.Length && q < n)
+        //     {
+        //         if (p < m && nums1[pos] <= nums2[q])
+        //         {
+        //             p++;
+        //             pos++;
+        //             continue;
+        //         }
+        //         else
+        //         {
+        //             for (int i = nums1.Length - 2; i >= pos; i--)
+        //             {
+        //                 nums1[i + 1] = nums1[i];
+        //             }
+        //             nums1[pos] = nums2[q++];
+        //         }
+        //         pos++;
+        //     }
+        // }
+
         public void Merge(int[] nums1, int m, int[] nums2, int n)
         {
-            // p curr item in nums1_0[..m]
-            // q curr item in nums2
-            // pos curr index in result, nums1
-            int p = 0, pos = 0, q = 0;
-            while (pos < nums1.Length && q < n)
+            int i = m - 1, j = n - 1, pos = nums1.Length - 1;
+            while (pos >= 0 && j >= 0)
             {
-                if (p < m && nums1[pos] <= nums2[q])
-                {
-                    p++;
-                    pos++;
-                    continue;
-                }
-                else
-                {
-                    for (int i = nums1.Length - 2; i >= pos; i--)
-                    {
-                        nums1[i + 1] = nums1[i];
-                    }
-                    nums1[pos] = nums2[q++];
-                }
-                pos++;
-
+                nums1[pos--] = i >= 0 && nums1[i] > nums2[j]
+                    ? nums1[i--]
+                    : nums2[j--];
             }
         }
     }
