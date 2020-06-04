@@ -68,49 +68,47 @@ namespace _977
         // merge-sort solution
         //
         // no modification of initial array
+        // public int[] SortedSquares(int[] A)
+        // {
+        //     var eol = 0;
+        //     var length = A.Length;
+        //     while (eol < length && A[eol] < 0) { eol++; }
+        //     var res = new int[length];
+        //     int i = eol - 1, j = eol, pos = 0;
+        //     while (i >= 0 && j < length)
+        //     {
+        //         var left = A[i] * A[i];
+        //         var right = A[j] * A[j];
+        //         var min = Math.Min(left, right);
+        //         _ = left < right ? i-- : j++;
+        //         res[pos++] = min;
+        //     }
+        //     while (i >= 0)
+        //     {
+        //         res[pos++] = A[i] * A[i];
+        //         i--;
+        //     }
+        //     while (j < length)
+        //     {
+        //         res[pos++] = A[j] * A[j];
+        //         j++;
+        //     }
+        //     return res;
+        // }
+
         public int[] SortedSquares(int[] A)
         {
-            var eol = 0;
             var length = A.Length;
-            while (eol < length && A[eol] < 0) { eol++; }
-            var res = new int[length];
-            int i = eol - 1, j = eol, pos = 0;
-            while (i >= 0 && j < length)
+            int start = 0, end = length - 1, pos = length - 1;
+            int[] res = new int[length];
+            while (start <= end)
             {
-                var left = A[i] * A[i];
-                var right = A[j] * A[j];
-                var min = Math.Min(left, right);
-                _ = left < right ? i-- : j++;
-                res[pos++] = min;
-            }
-            while (i >= 0)
-            {
-                res[pos++] = A[i] * A[i];
-                i--;
-            }
-            while (j < length)
-            {
-                res[pos++] = A[j] * A[j];
-                j++;
+                var curr = Math.Abs(A[start]) > A[end] ? A[start++] : A[end--];
+                curr *= curr;
+                res[pos--] = curr;
             }
             return res;
         }
-        // Q: can we squeeze out some space by using in-place cyclic updates?
-        // public int[] SortedSquares(int[] A)
-        // {
-        //     var p = 0;
-        //     var length = A.Length;
-        //     while (A[p] < 0 && p < length) { p++; }
-
-        //     var j = p + 1;
-        //     var i = p;
-        //     while (i < j && j < length && i >= 0)
-        //     {
-
-        //     }
-        // }
-
-
     }
     // @lc code=end
 }
