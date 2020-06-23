@@ -84,6 +84,14 @@ namespace _26
             }
             return j;
         }
+        // public int RemoveDuplicates(int[] nums)
+        // {
+        //     var end = nums.Length > 1 ? 1 : nums.Length;
+        //     for(int i = 1; i < nums.Length; i++)
+        //         if(nums[i - 1] != nums[i])
+        //             nums[end++] = nums[i];
+        //     return end;
+        // }
     }
     // @lc code=end
 }
